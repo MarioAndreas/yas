@@ -1,0 +1,10 @@
+{
+  "name": "Yasmine",
+  "version": "0.0.1",
+  "description": "Yasmine personal web site",
+  "author": "Mario Kaack",
+  "devDependencies": {
+    "browser-sync": "^2.9.8",
+    "gulp": "^3.9.0"
+  }
+}

@@ -1,0 +1,131 @@
+
+main {
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+nav #menu-button {
+  font-size: 1.5em;
+}
+nav #menu-button:hover + ul {
+  display: block;
+}
+nav ul {
+  list-style-type: none
+}
+
+nav > ul {
+  font-size: 1.5em;
+  padding-left: 10px;
+  display: none;
+}
+
+nav ul li {
+  padding: 8px;
+}
+
+nav .submenu ul {
+  display: none;
+}
+
+nav .submenu:hover ul {
+  display: block;
+}
+
+h1 {
+  color: #357;
+}
+
+a {
+  font-size: 1em;
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover,
+nav .submenu:hover {
+  color: #b00;
+}
+
+.box {
+  width: 50%;
+  float: left;
+}
+
+.box img {
+  width: 98%;
+}
+
+div li:nth-child(2) {
+  outline: 1px solid green;
+}
+
+footer {
+  height: 75px;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 0.8em;
+  color: #888;
+  text-align: center;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+
+@media (min-width: 960px) {
+  main {
+    max-width: 1024px;
+  }
+  .box {
+    width: 25%;
+  }
+  
+}
+
+/*
+nav ul {
+  text-align: center;
+  padding-left: 0;
+  color: #333;
+  font-size: 1.3rem;
+  background: #fff;
+  
+}
+
+nav li {
+  display: inline-block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+nav .submenu {
+  position: relative;
+}
+
+nav .submenu ul {
+  text-align: left;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 35px;
+  transition: height 0.1s;
+}
+
+nav .submenu:hover ul {
+  height: 110px;
+  -webkit-box-shadow: 0 3px 3px 0 #f4f4f4;
+  -moz-box-shadow: 0 3px 3px 0 #f4f4f4;
+  box-shadow: 0 3px 3px 0 #f4f4f4;
+}
+
+nav .submenu li {
+  display: block;
+  padding-left: 10px;
+}
+*/
