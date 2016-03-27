@@ -36,7 +36,7 @@ nav #menu-button {
 }
 
 nav > ul {
-  display: none;
+  height: 0;
   font-size: 1.5em;
   background: #fff;
   width: 100%;
@@ -44,9 +44,11 @@ nav > ul {
   overflow: hidden;
   position: absolute;
   top: 8px;
+  transition: height .5s;
 }
+
 nav #menu-button:hover + ul {
-  display: block;
+  height: 200px;
 }
 
 nav ul li {
@@ -106,6 +108,8 @@ footer p {
   clear: both;
 }
 
+/* Media Queries */
+/***************************/
 @media (min-width: 960px) {
   main {
     max-width: 1024px;
@@ -113,47 +117,44 @@ footer p {
   .box {
     width: 25%;
   }
+  nav #menu-button {
+    display: none;
+  }
+  nav > ul {
+    height: auto;
+    position: relative;
+  }
+  nav ul {
+    text-align: center;
+    padding-left: 0;
+    color: #333;
+    font-size: 1.3rem;
+    background: #fff;
+  }
+  nav li {
+    display: inline-block;
+    padding: 6px 10px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  nav .submenu {
+    position: relative;
+  }
+  nav .submenu ul {
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 35px;
+    transition: height 0.1s;
+  }
+  nav .submenu:hover ul {
+    height: 110px;
+    -webkit-box-shadow: 0 3px 3px 0 #f4f4f4;
+    -moz-box-shadow: 0 3px 3px 0 #f4f4f4;
+    box-shadow: 0 3px 3px 0 #f4f4f4;
+  }
+  nav .submenu li {
+    display: block;
+    padding-left: 10px;
+  }
 }
-
-
-/*
-nav ul {
-  text-align: center;
-  padding-left: 0;
-  color: #333;
-  font-size: 1.3rem;
-  background: #fff;
-  
-}
-
-nav li {
-  display: inline-block;
-  padding: 6px 10px;
-  border-bottom: 1px solid #f2f2f2;
-}
-
-nav .submenu {
-  position: relative;
-}
-
-nav .submenu ul {
-  text-align: left;
-  height: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 35px;
-  transition: height 0.1s;
-}
-
-nav .submenu:hover ul {
-  height: 110px;
-  -webkit-box-shadow: 0 3px 3px 0 #f4f4f4;
-  -moz-box-shadow: 0 3px 3px 0 #f4f4f4;
-  box-shadow: 0 3px 3px 0 #f4f4f4;
-}
-
-nav .submenu li {
-  display: block;
-  padding-left: 10px;
-}
-*/
