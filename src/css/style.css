@@ -1,23 +1,52 @@
-
 main {
   max-width: 480px;
   margin: 20px auto;
 }
 
-nav #menu-button {
-  font-size: 1.5em;
+nav {
+  position: relative;
 }
-nav #menu-button:hover + ul {
-  display: block;
-}
+
 nav ul {
   list-style-type: none
 }
 
-nav > ul {
+nav #menu-button {
   font-size: 1.5em;
-  padding-left: 10px;
+}
+
+.hamburger {
+  position: relative;
+  display: inline-block;
+  width: 0.9em;
+  height: 0.55em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  border-top: 0.15em solid #666;
+  border-bottom: 0.15em solid #666;
+}
+
+.hamburger:before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  width: 100%;
+  border-top: 0.15em solid #666;
+}
+
+nav > ul {
   display: none;
+  font-size: 1.5em;
+  background: #fff;
+  width: 100%;
+  padding-left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+}
+nav #menu-button:hover + ul {
+  display: block;
 }
 
 nav ul li {
@@ -77,7 +106,6 @@ footer p {
   clear: both;
 }
 
-
 @media (min-width: 960px) {
   main {
     max-width: 1024px;
@@ -85,8 +113,8 @@ footer p {
   .box {
     width: 25%;
   }
-  
 }
+
 
 /*
 nav ul {
