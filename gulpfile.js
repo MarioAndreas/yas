@@ -10,3 +10,5 @@ gulp.task('server', function () {
   });
   gulp.watch(['src/*.html', 'src/css/*.css', 'src/js/*.js']).on('change', reload);
 });
+
+gulp.task('default', ['server']);
